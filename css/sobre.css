@@ -70,33 +70,6 @@ li a:hover {
     background-color: var(--cor-3);
 }
 
-@keyframes propaganda {
-    0% {
-        background-image: url("../imagens/propaganda2.png");
-    }
-
-    50% {
-        background-image: url("../imagens/propaganda2.2.png");
-    }
-
-    100% {
-        background-image: url("../imagens/propaganda2.3.png");
-    }
-}
-
-#Propaganda-principal {
-    height: 260px;
-    width: 960px;
-    box-shadow:
-        -0.2em 0 0.4em rgb(0, 36, 70),
-        2px 3px rgb(15, 2, 73);
-    background-size: 1000px;
-    background-repeat: repeat;
-    animation: propaganda 10s infinite alternate;
-    margin-left: 460px;
-    margin-top: 60px;
-}
-
 .titulo-h1 {
     font-size: 40px;
     margin-left: 50px;
@@ -163,11 +136,4 @@ footer>p {
 .frase-footer {
     font-size: 25px;
     color: whitesmoke;
-}
-
-iframe{
-    margin-left: 570px;
-    border-radius: 2%;
-    width: 620px;
-    height: 346px;
 }
