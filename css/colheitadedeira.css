@@ -14,6 +14,8 @@
     --fonte-principal: 'Oswald', sans-serif;
 }
 
+* { margin: 0; padding: 0; }
+
 body {
     background-color: var(--cor-fundo-principal);
     color: var(--cor-texto-principal);
@@ -39,7 +41,7 @@ header {
     font-size: 30px;
 }
 
-ul {
+.nav-bar {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -70,37 +72,71 @@ li a:hover {
     background-color: var(--cor-3);
 }
 
-@keyframes propaganda {
-    0% {
-        background-image: url("../imagens/propaganda2.png");
-    }
 
-    50% {
-        background-image: url("../imagens/propaganda2.2.png");
-    }
-
-    100% {
-        background-image: url("../imagens/propaganda2.3.png");
-    }
+.slider {
+    display: block;
+    height: 293px;
+    width: 600px;
+    margin: auto;
+    margin-top: 20px;
+    position: relative;
 }
 
-#Propaganda-principal {
-    height: 260px;
-    width: 960px;
-    box-shadow:
-        -0.2em 0 0.4em rgb(0, 36, 70),
-        2px 3px rgb(15, 2, 73);
-    background-size: 1000px;
-    background-repeat: repeat;
-    animation: propaganda 10s infinite alternate;
-    margin-left: 460px;
-    margin-top: 60px;
+.slider li {
+    list-style: none;
+    position: absolute;
+}
+
+.slider img {
+    margin: auto;
+    height: 100%;
+    width: 100%;
+    vertical-align: top;
+}
+
+.slider input {
+    display: none;
+}
+
+.slider label {
+    background-color: #000;
+    bottom: 10px;
+    cursor: pointer;
+    display: block;
+    height: 10px;
+    position: absolute;
+    width: 10px;
+    z-index: 10;
+}
+
+.slider li:nth-child(1) label {
+    left: 10px;
+}
+
+.slider li:nth-child(2) label {
+    left: 40px;
+}
+
+.slider li:nth-child(3) label {
+    left: 70px;
+}
+
+.slider img {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.slider li input:checked ~ img {
+    opacity: 1;
+    visibility: visible;
+    z-index: 10;
 }
 
 .titulo-h1 {
     font-size: 40px;
     margin-left: 50px;
 }
+
 .titulo-h3 {
     font-size: 18px;
     margin-left: 50px;
@@ -133,17 +169,20 @@ main {
     margin-top: -90px;
     font-size: 20px;
 }
+
 .titulo-h1 {
     font-size: 55px;
     margin-left: 50px;
     margin-top: 20px;
 }
+
 .titulo-h2 {
     font-size: 30px;
     margin-left: 135px;
     margin-top: -20px;
 }
-#titulo-h3{
+
+#titulo-h3 {
     font-size: 18px;
     margin-left: 50px;
     margin-top: -35px;
@@ -165,7 +204,7 @@ footer>p {
     color: whitesmoke;
 }
 
-iframe{
+iframe {
     margin-left: 570px;
     border-radius: 2%;
     width: 620px;
